@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operaciones con Matrices</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Suma y Multiplicación de Matrices</h1>
+
+    <section class="panel">
+      <h2>1. Definir tamaño</h2>
+      <label>
+        Filas:
+        <input id="rows" type="number" min="1" value="2" />
+      </label>
+      <label>
+        Columnas:
+        <input id="cols" type="number" min="1" value="2" />
+      </label>
+      <button id="drawBtn" type="button">Dibujar matrices</button>
+    </section>
+
+    <section class="panel">
+      <h2>2. Cargar valores</h2>
+      <div class="matrices-grid">
+        <div>
+          <h3>Matriz A</h3>
+          <div id="matrixA" class="matrix"></div>
+        </div>
+        <div>
+          <h3>Matriz B</h3>
+          <div id="matrixB" class="matrix"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>3. Operación</h2>
+      <label>
+        <input type="radio" name="operation" value="add" checked />
+        Suma
+      </label>
+      <label>
+        <input type="radio" name="operation" value="multiply" />
+        Multiplicación
+      </label>
+      <div class="buttons">
+        <button id="localBtn" type="button">Calcular local</button>
+        <button id="nodeBtn" type="button">Calcular en NodeJS</button>
+        <button id="pythonBtn" type="button">Calcular en Python</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Resultado</h2>
+      <div id="result" class="matrix result"></div>
+      <div id="message" class="message"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
